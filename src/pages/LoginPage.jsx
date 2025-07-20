@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { signInWithEmailAndPassword } from "firebase/auth";
-import { auth } from "../firebase/firebase";
+import { auth } from "../script/firebase";
 import AuthForm from "../components/AuthForm";
 import { useUserStore } from "../store";
 

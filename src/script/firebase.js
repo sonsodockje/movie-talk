@@ -1,9 +1,10 @@
 import { initializeApp } from "firebase/app";
+import { getAuth } from "firebase/auth";
 
 const firebaseConfig = {
   apiKey: import.meta.env.VITE_FE_API_KEY,
   authDomain: "miniitter.firebaseapp.com",
-  databaseURL: "https://miniitter-default-rtdb.firebaseio.com",
+  databaseURL: "https://miniitter.firebaseio.com",
   projectId: "miniitter",
   storageBucket: "miniitter.appspot.com",
   messagingSenderId: "536393511478",
@@ -11,3 +12,4 @@ const firebaseConfig = {
 };
 
 export const app = initializeApp(firebaseConfig);
+export const auth = getAuth(app);

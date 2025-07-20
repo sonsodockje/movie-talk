@@ -5,6 +5,7 @@ import "swiper/css/navigation";
 import Card from "./Card";
 
 function SwiperComponent({ data }) {
+  console.log("Data in SwiperComponent.jsx:", data);
   return (
     <Swiper
       modules={[Navigation]}

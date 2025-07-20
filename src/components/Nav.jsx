@@ -1,10 +1,9 @@
 import { useState } from "react";
-import { useAuthStore } from "../store";
+import { useUserStore } from "../store";
 import { Link, Outlet } from "react-router-dom";
 
 function Nav() {
-  const isLogin = useAuthStore((state) => state.isLogin);
-  const loginToggleAction = useAuthStore((state) => state.loginToggleAction);
+  const { isLogin, loginToggleAction } = useUserStore();
   const [input, setInput] = useState("");
   function searchHandler() {
     console.log(input);

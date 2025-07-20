@@ -2,6 +2,7 @@
 import { Link } from "react-router-dom";
 
 function Card({ item }) {
+  console.log("Item in Card.jsx:", item);
   return (
     <div className="aspect-[2/3] overflow-hidden rounded-md">
       <Link to={`/detail/${item.id}`}>
