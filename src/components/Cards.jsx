@@ -13,7 +13,7 @@ function Cards() {
         const respon = await getWeekTrendingMovies();
         const responRandom = respon.sort(() => Math.random() - 0.5);
         setData(responRandom);
-        console.log(responRandom);
+        
       } catch (error) {
         console.error("Error fetching data:", error);
       }

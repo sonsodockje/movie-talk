@@ -20,8 +20,8 @@ export async function getWeekTrendingMovies() {
   return respon.data.results;
 }
 
-export async function getMovieDetial(moiveId) {
-  const respon = await instance.get(`${movieDetialUrl + moiveId.id}`, {
+export async function getMovieDetial(movieId) {
+  const respon = await instance.get(`${movieDetialUrl}${movieId}`, {
     params: {
       language: "ko-KR",
     },

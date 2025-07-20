@@ -18,7 +18,7 @@ function Info({ movieId }) {
         const tm = await getMovieDetial(movieId);
         setData(tm);
 
-        console.log(tm);
+        
       } catch (error) {
         console.error("Error fetching data:", error);
       }

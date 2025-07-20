@@ -1,14 +1,14 @@
-import React from "react";
+
 import { Link } from "react-router-dom";
 
-function Card({ item, index }) {
+function Card({ item }) {
   return (
-    <div className="">
+    <div className="aspect-[2/3] overflow-hidden rounded-md">
       <Link to={`/detail/${item.id}`}>
-        {/* 이미지 공간 미리 비워둬라 */}
         <img
-          src={`https://image.tmdb.org/t/p/original${item.poster_path}`}
-          className="aspect-[2/3]"
+          src={`https://image.tmdb.org/t/p/w500${item.poster_path}`}
+          alt={item.title}
+          className="w-full h-full object-cover"
         />
       </Link>
     </div>
