@@ -10,3 +10,21 @@
 body {
   background-color: var(--mian-bg-color);
 }
+.gd {
+  background-image: linear-gradient(
+    90deg,
+    transparent 40%,
+
+    #06141b 100%
+  );
+}
+.swiper-button-prev,
+.swiper-button-next {
+  color: rgb(255, 255, 255) !important;
+}
+
+.swiper-button-prev:after,
+.swiper-button-next:after {
+  font-size: 1.6rem !important;
+  font-weight: 900 !important;
+}

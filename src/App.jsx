@@ -7,17 +7,22 @@ import Myinfo from "./pages/Myinfo";
 import SignupPage from "./pages/SignupPage";
 
 const router = createBrowserRouter([
-  { path: "/", element: <HomePage /> },
-  { path: "/detail/:id", element: <DetailPage /> },
-  { path: "/login", element: <LoginPage /> },
-  { path: "/signup", element: <SignupPage /> },
-  { path: "/account/:id", element: <Myinfo /> },
+  {
+    path: "/",
+    element: <Nav />,
+    children: [
+      { index: true, element: <HomePage /> },
+      { path: "detail/:id", element: <DetailPage /> },
+      { path: "login", element: <LoginPage /> },
+      { path: "signup", element: <SignupPage /> },
+      { path: "account/:id", element: <Myinfo /> },
+    ],
+  },
 ]);
 
 function App() {
   return (
     <>
-      <Nav />
       <RouterProvider router={router} />
     </>
   );

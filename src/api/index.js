@@ -8,15 +8,24 @@ const instance = axios.create({
   },
 });
 
-const nowPlayingBasicUrl = "movie/now_playing";
+const weekTrendingMoviesUrl = "/trending/movie/week";
+const movieDetialUrl = "/movie/";
 
-export async function np() {
-  const aa = await instance.get(nowPlayingBasicUrl, {
+export async function getWeekTrendingMovies() {
+  const respon = await instance.get(weekTrendingMoviesUrl, {
     params: {
       language: "ko-KR",
-      page: 2,
-      region: "KR",
     },
   });
-  console.log(aa.data.results);
+  return respon.data.results;
+}
+
+export async function getMovieDetial(movieId) {
+  const respon = await instance.get(`${movieDetialUrl}${movieId}`, {
+    params: {
+      language: "ko-KR",
+    },
+  });
+
+  return respon.data;
 }
